@@ -1,0 +1,98 @@
+/* Estilos específicos para a página cadastro.html */
+@import url('../styles/style.css');
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: var(--c1);
+}
+
+.form-group input, .form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--c3);
+    box-shadow: 0 0 5px rgba(210, 105, 30, 0.5);
+}
+
+.date-input {
+    position: relative;
+}
+
+.date-input input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.date-input::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/calendar-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+    
+    .form-group input, .form-group select {
+        font-size: 0.9rem;
+    }
+    
+    button[type="submit"] {
+        font-size: 1rem;
+    }
+}

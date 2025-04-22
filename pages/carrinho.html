@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/carrinho.css">
+    <title>CarRental - Minhas Locações</title>
+</head>
+
+<body>
+    <header>
+        <h1>Minhas Locações</h1>
+        <nav>
+            <button onclick="window.location.href='./home.html'">Voltar</button>
+        </nav>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Carro</th>
+                    <th>Período</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-locacoes">
+                <!-- Conteúdo será preenchido via JavaScript -->
+            </tbody>
+        </table>
+        <div class="total-geral">
+            Total: R$ <span id="valor-total">0.00</span>
+        </div>
+        <div class="acoes">
+            <button onclick="window.location.href='./home.html'">Continuar Alugando</button>
+            <button onclick="finalizarLocacoes()">Finalizar Locações</button>
+        </div>
+    </main>
+    <footer>
+        <h2>CarRental - Sua melhor opção em locação de veículos</h2>
+    </footer>
+</body>
+<script src="../scripts/carrinho.js"></script>
+
+</html>

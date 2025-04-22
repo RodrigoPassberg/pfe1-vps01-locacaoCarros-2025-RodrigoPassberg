@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/home.css">
+    <title>CarRental - Veículos Disponíveis</title>
+</head>
+
+<body>
+    <header>
+        <h1>CAR RENTAL</h1>
+        <nav>
+            <button onclick="window.location.href='./carrinho.html'">&nbsp;</button>
+        </nav>
+    </header>
+    <main>
+        <!-- Os cards dos carros serão inseridos aqui pelo JavaScript -->
+    </main>
+    <footer>
+        <h2>CarRental - Sua melhor opção em locação de veículos</h2>
+    </footer>
+    <section id="detalhes" class="modal oculto">
+        <div class="janela">
+            <div class="cabecalho">
+                <h2>Car Details</h2>
+                <button onclick="fecharModal()">X</button>
+            </div>
+            <div class="conteudo">
+                <img src="" alt="Imagem do carro">
+                <div class="marca">
+                    <h3>Marca</h3>
+                    <p></p>
+                </div>
+                <div class="cor">
+                    <h3>Cor</h3>
+                    <p></p>
+                </div>
+                <div class="quilometragem">
+                    <h3>Quilometragem</h3>
+                    <p></p>
+                </div>
+                <div class="preco">
+                    <h3>Preço Por Dia</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="rodape">
+                <button onclick="window.location.href='./cadastro.html'">Alugar Agora</button>
+                <button onclick="fecharModal()">Close</button>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="../scripts/home.js"></script>
+
+</html>

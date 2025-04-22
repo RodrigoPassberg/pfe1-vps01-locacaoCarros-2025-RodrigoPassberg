@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>CarRental - Locadora de Carros</title>
+    <style>
+        .hero {
+            width: 100%;
+            height: 400px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
+        }
+
+        .feature-card {
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .feature-card h3 {
+            color: var(--c1);
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #333;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CarRental</h1>
+        <nav>
+            <button onclick="window.location.href='./pages/home.html'">Ver Carros</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Alugue o carro ideal para sua jornada</h1>
+            <p>Oferecemos uma ampla variedade de veículos para atender todas as suas necessidades, com os melhores preços e condições do mercado.</p>
+            <div class="cta-buttons">
+                <button onclick="window.location.href='./pages/home.html'">Ver Carros Disponíveis</button>
+                <button onclick="window.location.href='./pages/cadastro.html'">Fazer Reserva</button>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>Frota Diversificada</h3>
+                <p>Desde compactos econômicos até SUVs espaçosos, temos o veículo perfeito para sua necessidade.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Preços Competitivos</h3>
+                <p>Oferecemos as melhores tarifas do mercado, com transparência e sem taxas ocultas.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Atendimento Rápido</h3>
+                <p>Processo de reserva simplificado para que você pegue seu carro em minutos.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>CarRental - Sua melhor opção em locação de veículos</h2>
+    </footer>
+
+    <script>
+        // Verificar se já existem carros no localStorage
+        if (!localStorage.getItem('carros')) {
+            // Carregar os dados do arquivo JSON para o localStorage
+            fetch('./assets/dados.json')
+                .then(response => response.json())
+                .then(data => {
+                    localStorage.setItem('carros', JSON.stringify(data));
+                });
+        }
+    </script>
+</body>
+
+</html>

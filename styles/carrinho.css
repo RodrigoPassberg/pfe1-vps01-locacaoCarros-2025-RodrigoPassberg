@@ -1,0 +1,107 @@
+/* Estilos específicos para a página carrinho.html */
+@import url('../styles/style.css');
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--c1);
+    color: white;
+}
+
+tr:hover {
+    background-color: var(--c5);
+}
+
+.quantidade-controle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantidade-controle button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.quantidade-controle input {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.foto-carro {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.total-geral {
+    align-self: flex-end;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: var(--c1);
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+    
+    .foto-carro {
+        width: 60px;
+        height: 45px;
+    }
+    
+    .acoes {
+        flex-direction: column;
+    }
+    
+    .acoes button {
+        width: 100%;
+    }
+}
