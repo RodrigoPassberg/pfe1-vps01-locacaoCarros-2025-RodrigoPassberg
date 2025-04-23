@@ -8,15 +8,15 @@
 }
 
 :root {
-    --c1: #A0522D;
-    --c2: #8B4513;
-    --c3: #D2691E;
-    --c4: #F4A460;
-    --c5: #FFDEAD;
+    --c1: #003366;
+    --c2: #006699;
+    --c3: #0099CC;
+    --c4: #00CCFF;
+    --c5: #99DDFF;
     --t1: rgba(0, 0, 0, 0.8);
     --t2: rgba(255, 255, 255, 0.8);
 }
-
+       
 body {
     width: 100vw;
     height: 100vh;
@@ -142,5 +142,76 @@ footer {
 
     footer {
         font-size: 0.8rem;
+    }
+}
+
+.hero {
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.feature-card {
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature-card h3 {
+    color: var(--c1);
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
     }
 }

@@ -8,7 +8,7 @@
         "quilometragem": 15000,
         "preco_diaria": 100.00,
         "descricao": "Carro compacto econômico, ideal para cidade",
-        "imagem": "../assets/onix.jpg",
+        "imagem": "../assets/Onix.jpg",
         "disponivel": true
     },
     {
@@ -20,7 +20,7 @@
         "quilometragem": 25000,
         "preco_diaria": 120.00,
         "descricao": "Carro compacto com ótimo custo-benefício",
-        "imagem": "../assets/hb20.jpg",
+        "imagem": "../assets/HB20.jpg",
         "disponivel": true
     },
     {
@@ -32,7 +32,7 @@
         "quilometragem": 18000,
         "preco_diaria": 180.00,
         "descricao": "SUV compacto com ótimo desempenho",
-        "imagem": "../assets/renegade.jpg",
+        "imagem": "../assets/jeep.jpg",
         "disponivel": true
     },
     {
@@ -44,7 +44,7 @@
         "quilometragem": 30000,
         "preco_diaria": 150.00,
         "descricao": "Sedan médio com conforto e economia",
-        "imagem": "../assets/corolla.jpg",
+        "imagem": "../assets/Corolla.jpg",
         "disponivel": true
     },
     {
@@ -56,7 +56,7 @@
         "quilometragem": 22000,
         "preco_diaria": 200.00,
         "descricao": "SUV médio com tecnologia e conforto",
-        "imagem": "../assets/compass.jpg",
+        "imagem": "../assets/Compass.jpg",
         "disponivel": true
     },
     {
@@ -68,7 +68,7 @@
         "quilometragem": 12000,
         "preco_diaria": 170.00,
         "descricao": "Sedan esportivo com tecnologia avançada",
-        "imagem": "../assets/civic.jpg",
+        "imagem": "../assets/Civic.jpg",
         "disponivel": true
     }
 ]
