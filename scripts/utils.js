@@ -1,8 +1,6 @@
-// Script para inicializar o LocalStorage com dados de carros
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Verificar se já existem carros no localStorage
     if (!localStorage.getItem('carros')) {
-        // Carregar os dados do arquivo JSON para o localStorage
         fetch('../assets/dados.json')
             .then(response => response.json())
             .then(data => {
@@ -14,18 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    // Inicializar array de locações se não existir
     if (!localStorage.getItem('locacoes')) {
         localStorage.setItem('locacoes', JSON.stringify([]));
     }
 });
-
-// Funções utilitárias para validação
 function validarCPF(cpf) {
-    // Remover caracteres não numéricos
     cpf = cpf.replace(/\D/g, '');
     
-    // Verificar se tem 11 dígitos
     if (cpf.length !== 11) {
         return false;
     }
@@ -34,7 +27,6 @@ function validarCPF(cpf) {
 }
 
 function validarData(data) {
-    // Verificar se a data é válida
     const dataObj = new Date(data);
     return !isNaN(dataObj.getTime());
 }
@@ -56,7 +48,6 @@ function formatarMoeda(valor) {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
-// Funções para gerenciamento de carros e locações
 function obterCarrosDisponiveis() {
     const carros = JSON.parse(localStorage.getItem('carros')) || [];
     return carros.filter(carro => carro.disponivel);

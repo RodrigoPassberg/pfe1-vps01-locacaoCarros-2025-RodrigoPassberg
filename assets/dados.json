@@ -32,7 +32,7 @@
         "quilometragem": 18000,
         "preco_diaria": 180.00,
         "descricao": "SUV compacto com ótimo desempenho",
-        "imagem": "../assets/Renegate.jpg",
+        "imagem": "../assets/renegate.png",
         "disponivel": true
     },
     {

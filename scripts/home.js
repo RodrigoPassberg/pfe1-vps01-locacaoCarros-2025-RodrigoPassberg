@@ -55,7 +55,7 @@ function mostrarDetalhes(indice) {
     titulo.innerHTML = carros[indice].nome;
     imagem.src = carros[indice].imagem;
     imagem.onerror = function() {
-        this.src = '../assets/wireframe01.png';
+        this.src = './assets/wireframe01.png';
     };
     marca.innerHTML = carros[indice].marca;
     cor.innerHTML = carros[indice].cor;
